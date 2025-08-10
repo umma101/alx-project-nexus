@@ -1,0 +1,19 @@
+/* Reset margins/padding and set background/text colors */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  font-family: Arial, sans-serif;
+}
+
+/* Optional: make sure links are also white */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

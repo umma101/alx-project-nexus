@@ -1,9 +1,12 @@
-const MovieCard = ({ title, year, image }) => (
+// MovieCard with onClick support and pointer cursor
+const MovieCard = ({ title, year, image, onClick }) => (
   <div
+    onClick={onClick}
     style={{
       textAlign: "center",
       color: "white",
-      maxWidth: "180px",  // limit card width
+      cursor: "pointer",       // show pointer on hover
+      maxWidth: "180px",
       margin: "0 auto",
     }}
   >

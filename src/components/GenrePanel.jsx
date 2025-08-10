@@ -1,16 +1,30 @@
 import React from 'react';
 
-const GenrePanel = ({ genres = [], onSelectGenre, selected }) => {
+const GenrePanel = ({ onSelectGenre, selected }) => {
+  // Static list of genres
+  const genres = [
+    'Romance',
+    'Family',
+    'War',
+    'History',
+    'Documentary',
+    'Horror'
+  ];
+
   return (
     <aside className="bg-gray-900 text-white p-4 rounded-md">
-      <h3 className="font-semibold mb-3">Genre</h3>
+      <h3 className="font-semibold mb-3">Genres</h3>
 
       <div className="flex flex-wrap gap-2">
         {genres.map((g) => (
           <button
             key={g}
             onClick={() => onSelectGenre && onSelectGenre(g)}
-            className={`px-3 py-1 rounded-full text-xs ${selected === g ? 'bg-indigo-500' : 'bg-gray-800 hover:bg-gray-700'}`}
+            className={`px-3 py-1 rounded-full text-xs transition ${
+              selected === g
+                ? 'bg-indigo-500'
+                : 'bg-gray-800 hover:bg-gray-700'
+            }`}
           >
             {g}
           </button>
